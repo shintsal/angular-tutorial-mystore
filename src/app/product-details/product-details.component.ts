@@ -9,6 +9,7 @@ import { CartService } from '../cart.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
+  products = products;
   product;
   
   constructor(
@@ -16,15 +17,16 @@ export class ProductDetailsComponent implements OnInit {
     private CartService: CartService
   ) { }
 
+  ngOnInit(): void {
+    console.log(this.products);
+    this.route.paramMap.subscribe(params => {
+    this.product = products[+params.get('productId')];
+    })
+}
+
   addToCart(product) {
     window.alert('Your product has been added to the cart!');
     this.CartService.addToCart(products);
-  }
-
-  ngOnInit(): void {
-        this.route.paramMap.subscribe(params => {
-        this.product = products[+params.get('productId')];
-        })
   }
 
 }
