@@ -11,6 +11,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ProductListComponent } from './product-list/product-list.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { BackbtnComponent } from './backbtn/backbtn.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     ProductListComponent,
     ShippingComponent,
     TopBarComponent,
+    BackbtnComponent,
   ],
   imports: [
     BrowserModule,
